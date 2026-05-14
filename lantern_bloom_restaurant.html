@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lantern Bloom</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background-color: #faf7f2;
+      color: #222;
+    }
+
+    header {
+      background-color: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 24px;
+    }
+
+    #header-img {
+      width: 100%;
+      max-width: 900px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 16px;
+    }
+
+    nav {
+      margin-top: 12px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+      background-color: rgba(255,255,255,0.15);
+      padding: 8px 14px;
+      border-radius: 20px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+
+    section {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 24px;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+
+    article {
+      border: 1px solid #eee;
+      padding: 14px;
+      border-radius: 12px;
+    }
+
+    article img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="number"] {
+      width: 80px;
+      margin-top: 4px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 80px;
+      margin-top: 6px;
+    }
+
+    input[type="submit"] {
+      background-color: #1f2937;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #111827;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- My Header -->
+  <header>
+    <img
+      id="header-img"
+      src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1400&q=60"
+      alt="Restaurant food table"
+    />
+
+    <h1>Lantern Bloom</h1>
+
+    <nav>
+      <a href="#menu">#menu</a>
+      <a href="#order-form">#order-form</a>
+    </nav>
+  </header>
+
+  <!-- My Main Content -->
+  <main>
+
+    <!-- My Menu Section -->
+    <section id="menu">
+      <h2>Menu</h2>
+
+      <div class="menu-grid">
+        <article>
+          <img
+            src="https://i.pinimg.com/1200x/0c/a7/6e/0ca76efd36fb6d74665068867cddbdea.jpg"
+            alt="Ramen bowl"
+          />
+          <h3>Golden Lantern Ramen</h3>
+          <p>
+            Rich broth with handmade noodles, soft egg, and scallions.
+            <i>$13.49</i>
+          </p>
+        </article>
+
+        <article>
+          <img
+            src="https://i.pinimg.com/1200x/14/2e/bf/142ebf34c0138f5fb5b69c909200e0ba.jpg"
+            alt="Dumplings"
+          />
+          <h3>Bloom Dumplings</h3>
+          <p>
+            Pan-seared dumplings filled with pork, ginger, and garlic.
+            <i>$8.99</i>
+          </p>
+        </article>
+
+        <article>
+          <img
+            src="https://i.pinimg.com/1200x/26/92/a0/2692a0e44793ec54b109bbe85c41467a.jpg"
+            alt="Milk tea."
+          />
+          <h3>Jasmine Milk Tea</h3>
+          <p>
+            Fragrant jasmine tea blended with milk and boba pearls.
+            <i>$5.25</i>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- My Order Form Section -->
+    <section id="order-form">
+      <h2>Place Your Order</h2>
+
+      <form>
+        <label for="ramen">Golden Lantern Ramen (Qty)</label>
+        <input type="number" id="ramen" name="ramen" min="0" value="0" />
+
+        <label for="dumplings">Bloom Dumplings (Qty)</label>
+        <input type="number" id="dumplings" name="dumplings" min="0" value="0" />
+
+        <label for="tea">Jasmine Milk Tea (Qty)</label>
+        <input type="number" id="tea" name="tea" min="0" value="0" />
+
+        <label>
+          <input type="checkbox" name="addon" value="extra-egg" />
+          Extra Egg (+$1)
+        </label>
+
+        <label>
+          <input type="checkbox" name="addon" value="extra-boba" />
+          Extra Boba (+$0.75)
+        </label>
+
+        <label for="requests">Special Requests</label>
+        <textarea
+          id="requests"
+          name="requests"
+          placeholder="Allergies, spice level, or special instructions..."
+        ></textarea>
+
+        <br /><br />
+        <input type="submit" value="Go To Checkout" />
+      </form>
+    </section>
+
+  </main>
+
+  <!-- My Footer -->
+  <footer>
+    <p>Made with love by traebracy!</p>
+  </footer>
+
+</body>
+</html>
