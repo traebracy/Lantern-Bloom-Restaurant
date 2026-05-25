@@ -1,4 +1,4 @@
-# Lantern Bloom Restaurant
+# Lantern Bloom 
 
 This is a simple restaurant website built with HTML.
 
